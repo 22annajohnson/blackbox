@@ -6,24 +6,38 @@
 //
 
 import UIKit
+import MapKit
 
 class TeamViewController: UIViewController {
-
+    
+    var routeCoordinates : [CLLocation] = []
+    
+    let mapView : MKMapView = {
+        let map = MKMapView()
+        map.overrideUserInterfaceStyle = .dark
+        return map
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        mapView.delegate = self
+        setMapConstraints()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setMapConstraints() {
+        view.addSubview(mapView)
+        
+        mapView.translatesAutoresizingMaskIntoConstraints = false
+        mapView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        mapView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        mapView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        mapView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
     }
-    */
+    
+}
+
+extension TeamViewController : MKMapViewDelegate {
+  //DELEGATE FUNCTIONS
 
 }

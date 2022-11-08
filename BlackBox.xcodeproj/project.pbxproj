@@ -18,6 +18,8 @@
 		57D5544A291ADAC60042A244 /* VitalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D55449291ADAC60042A244 /* VitalsViewController.swift */; };
 		57D5544C291ADAD50042A244 /* EnvironmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D5544B291ADAD50042A244 /* EnvironmentViewController.swift */; };
 		57D5544F291ADC060042A244 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D5544E291ADC060042A244 /* SummaryView.swift */; };
+		57D55452291B09730042A244 /* SummaryMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D55451291B09730042A244 /* SummaryMapView.swift */; };
+		57D55456291B16B20042A244 /* Inter-VariableFont_slnt,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57D55455291B16B20042A244 /* Inter-VariableFont_slnt,wght.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		57D55449291ADAC60042A244 /* VitalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalsViewController.swift; sourceTree = "<group>"; };
 		57D5544B291ADAD50042A244 /* EnvironmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentViewController.swift; sourceTree = "<group>"; };
 		57D5544E291ADC060042A244 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		57D55451291B09730042A244 /* SummaryMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryMapView.swift; sourceTree = "<group>"; };
+		57D55455291B16B20042A244 /* Inter-VariableFont_slnt,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-VariableFont_slnt,wght.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 		57D5542C291AD5B90042A244 /* BlackBox */ = {
 			isa = PBXGroup;
 			children = (
+				57D55453291B163B0042A244 /* Fonts */,
+				57D55450291B08F70042A244 /* UIViews */,
 				57D5544D291ADBF00042A244 /* SwiftUIViews */,
 				57D55444291AD7C00042A244 /* ViewControllers */,
 				57D5542D291AD5B90042A244 /* AppDelegate.swift */,
@@ -96,6 +102,22 @@
 				57D5544E291ADC060042A244 /* SummaryView.swift */,
 			);
 			path = SwiftUIViews;
+			sourceTree = "<group>";
+		};
+		57D55450291B08F70042A244 /* UIViews */ = {
+			isa = PBXGroup;
+			children = (
+				57D55451291B09730042A244 /* SummaryMapView.swift */,
+			);
+			path = UIViews;
+			sourceTree = "<group>";
+		};
+		57D55453291B163B0042A244 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				57D55455291B16B20042A244 /* Inter-VariableFont_slnt,wght.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57D5543D291AD5BB0042A244 /* LaunchScreen.storyboard in Resources */,
+				57D55456291B16B20042A244 /* Inter-VariableFont_slnt,wght.ttf in Resources */,
 				57D5543A291AD5BB0042A244 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,6 +195,7 @@
 				57D55448291ADAB80042A244 /* TeamViewController.swift in Sources */,
 				57D55432291AD5BA0042A244 /* MainTabBarViewController.swift in Sources */,
 				57D5544A291ADAC60042A244 /* VitalsViewController.swift in Sources */,
+				57D55452291B09730042A244 /* SummaryMapView.swift in Sources */,
 				57D5542E291AD5B90042A244 /* AppDelegate.swift in Sources */,
 				57D55430291AD5BA0042A244 /* SceneDelegate.swift in Sources */,
 				57D5544C291ADAD50042A244 /* EnvironmentViewController.swift in Sources */,

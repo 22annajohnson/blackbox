@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class MainTabBarViewController: UITabBarController {
 
@@ -33,7 +34,6 @@ class MainTabBarViewController: UITabBarController {
         tabBar.tintColor = .systemBlue
         
         setViewControllers([vc1, vc2, vc3, vc4], animated: true)    }
-
 
 }
 
