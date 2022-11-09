@@ -27,6 +27,7 @@
 		57EF095A291C16C6006C9D74 /* SensorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EF0959291C16C6006C9D74 /* SensorInfo.swift */; };
 		57EF095C291C1AAD006C9D74 /* SensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EF095B291C1AAD006C9D74 /* SensorViewController.swift */; };
 		A1B81C6A291C2D0C00469D98 /* HeartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B81C69291C2D0C00469D98 /* HeartRateView.swift */; };
+		A1B81C6C291C69A600469D98 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B81C6B291C69A600469D98 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		57EF0959291C16C6006C9D74 /* SensorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorInfo.swift; sourceTree = "<group>"; };
 		57EF095B291C1AAD006C9D74 /* SensorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewController.swift; sourceTree = "<group>"; };
 		A1B81C69291C2D0C00469D98 /* HeartRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateView.swift; sourceTree = "<group>"; };
+		A1B81C6B291C69A600469D98 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				57EF0955291B222C006C9D74 /* HealthImages.swift */,
 				57EF0957291B32F8006C9D74 /* EnvironmentImages.swift */,
 				57EF0959291C16C6006C9D74 /* SensorInfo.swift */,
+				A1B81C6B291C69A600469D98 /* Data.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				57D55432291AD5BA0042A244 /* MainTabBarViewController.swift in Sources */,
 				57D5544A291ADAC60042A244 /* VitalsViewController.swift in Sources */,
 				57EF095A291C16C6006C9D74 /* SensorInfo.swift in Sources */,
+				A1B81C6C291C69A600469D98 /* Data.swift in Sources */,
 				57D55452291B09730042A244 /* SummaryMapView.swift in Sources */,
 				57D5542E291AD5B90042A244 /* AppDelegate.swift in Sources */,
 				57EF0951291B1FB2006C9D74 /* SensorTableViewCell.swift in Sources */,
@@ -383,13 +387,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QTSJFA7Y7P;
+				DEVELOPMENT_TEAM = 4C7H6LPRHA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BlackBox/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -410,13 +415,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QTSJFA7Y7P;
+				DEVELOPMENT_TEAM = 4C7H6LPRHA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BlackBox/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

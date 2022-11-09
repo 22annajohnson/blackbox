@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Charts
 
 struct HeartRateView: View {
     
@@ -34,6 +35,12 @@ struct HeartRateView: View {
                         .font(.subheadline)
                         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                         .padding()
+                }
+                Chart(SalesData.last30Days, id: \.day) {
+                    LineMark(
+                        x: .value("Day", $0.day, unit: .day),
+                        y: .value("Sales", $0.sales)
+                    )
                 }
             }
             
