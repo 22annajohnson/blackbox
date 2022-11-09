@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeHealthTableViewCell: UITableViewCell {
+class SensorTableViewCell: UITableViewCell {
 
     var healthImageView = UIImageView()
     var healthTitleLabel = UILabel()
@@ -32,7 +32,7 @@ class HomeHealthTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func set(health: Health) {
+    func set(health: Sensor) {
         healthImageView.image = health.image
         healthImageView.contentMode = .scaleAspectFit
         healthTitleLabel.text = health.title

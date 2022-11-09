@@ -11,14 +11,16 @@ import MapKit
 
 class HomeViewController: UIViewController, MKMapViewDelegate {
 
-    var health: [Health] = []
+    var health: [Sensor] = []
+    var info: [SensorInfo] = []
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1)
 //        view.backgroundColor = UIColor(red: 243/255.0 , green: 244/255.0 , blue: 248/255.0,  alpha: 1)
-        health = fetchData()
+        (health, info) = fetchData()
         addTitle()
         addProfileImage()
         addHealthAlerts()
@@ -60,7 +62,7 @@ class HomeViewController: UIViewController, MKMapViewDelegate {
         setTableViewDelegates(tableView: tableView)
         tableView.backgroundColor = .clear
         //customizes the TableViewCell
-        tableView.register(HomeHealthTableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(SensorTableViewCell.self, forCellReuseIdentifier: "cell")
 
         
         view.addSubview(tableView)
@@ -101,7 +103,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! HomeHealthTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! SensorTableViewCell
         let health = health[indexPath.section]
         
         //Sets the cells data
@@ -128,19 +130,28 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0
     }
+    
+    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+        let navController = UINavigationController(rootViewController: SensorViewController())
+        self.present(navController, animated: true, completion: nil)
+    }
 }
 
 extension HomeViewController {
     
-    func fetchData() -> [Health] {
-        let health1 = Health(image: HealthImages.lungs!, title: "Breathing Rate")
-        let health2 = Health(image: HealthImages.heart!, title: "Heart Rate")
+    func fetchData() -> ([Sensor], [SensorInfo]) {
+        let health1 = Sensor(image: HealthImages.lungs!, title: "Breathing Rate")
+        let health2 = Sensor(image: HealthImages.heart!, title: "Heart Rate")
+        
+        let info1 = SensorInfo(title: "Breathing Rate")
+        let info2 = SensorInfo(title: "Heart Rate")
+
 //        let health3 = Health(image: Images.stethoscope!, title: "Blood Oxygen")
 //        let health4 = Health(image: Images.alert!, title: "Alertness")
 //        let health5 = Health(image: Images.temp!, title: "Cabin Temp")
 //        let health6 = Health(image: Images.carbon!, title: "Carbon Monoxide")
 //
-        return [health1, health2]
+        return ([health1, health2], [info1, info2])
     }
 }
 

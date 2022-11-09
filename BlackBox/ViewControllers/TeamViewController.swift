@@ -7,37 +7,42 @@
 
 import UIKit
 import MapKit
+import SwiftUI
 
 class TeamViewController: UIViewController {
     
-    var routeCoordinates : [CLLocation] = []
-    
-    let mapView : MKMapView = {
-        let map = MKMapView()
-        map.overrideUserInterfaceStyle = .dark
-        return map
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        mapView.delegate = self
-        setMapConstraints()
-    }
-    
-    func setMapConstraints() {
-        view.addSubview(mapView)
-        
-        mapView.translatesAutoresizingMaskIntoConstraints = false
-        mapView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-        mapView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
-        mapView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-        mapView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-    }
-    
-}
+        view.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1)
+        let label = UILabel()
+        label.text = "UIKit Screen"
+        label.textColor = .black
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .boldSystemFont(ofSize: 21)
+        view.addSubview(label)
 
-extension TeamViewController : MKMapViewDelegate {
-  //DELEGATE FUNCTIONS
+        let button = UIButton()
+        button.setTitleColor(.blue, for: .normal)
+        button.setTitle("Navigate to SwiftUI Screen", for: .normal)
+        button.titleLabel?.textAlignment = .center
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(openSwiftUIScreen), for: .touchUpInside)
+        button.titleLabel?.font = .boldSystemFont(ofSize: 21)
+
+        view.addSubview(button)
+    
+        NSLayoutConstraint.activate([
+            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            button.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            button.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 64)])
+    }
+
+    @objc func openSwiftUIScreen() {
+        let swiftUIViewController = UIHostingController(rootView: SummaryView(navigationController: self.navigationController))
+        self.navigationController?.pushViewController(swiftUIViewController, animated: true)
+    }
 
 }
+    
+

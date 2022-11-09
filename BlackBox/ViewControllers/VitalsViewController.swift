@@ -10,7 +10,7 @@ import MapKit
 
 class VitalsViewController: UIViewController {
 
-    var health: [Health] = []
+    var health: [Sensor] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +50,7 @@ class VitalsViewController: UIViewController {
         setTableViewDelegates(tableView: tableView)
         tableView.backgroundColor = .clear
         //customizes the TableViewCell
-        tableView.register(HomeHealthTableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(SensorTableViewCell.self, forCellReuseIdentifier: "cell")
 
         
         view.addSubview(tableView)
@@ -76,7 +76,7 @@ extension VitalsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! HomeHealthTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! SensorTableViewCell
         let health = health[indexPath.section]
         
         cell.set(health: health)
@@ -103,17 +103,22 @@ extension VitalsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0
     }
+    
+    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+        let navController = UINavigationController(rootViewController: SensorViewController())
+        self.present(navController, animated: true, completion: nil)
+    }
 }
 
 extension VitalsViewController {
     
-    func fetchData() -> [Health] {
-        let health1 = Health(image: HealthImages.lungs!, title: "Breathing Rate")
-        let health2 = Health(image: HealthImages.heart!, title: "Heart Rate")
-        let health3 = Health(image: HealthImages.stethoscope!, title: "Blood Oxygen")
-        let health4 = Health(image: HealthImages.alert!, title: "Alertness")
-        let health5 = Health(image: HealthImages.temp!, title: "Cabin Temp")
-        let health6 = Health(image: HealthImages.carbon!, title: "Carbon Monoxide")
+    func fetchData() -> [Sensor] {
+        let health1 = Sensor(image: HealthImages.lungs!, title: "Breathing Rate")
+        let health2 = Sensor(image: HealthImages.heart!, title: "Heart Rate")
+        let health3 = Sensor(image: HealthImages.stethoscope!, title: "Blood Oxygen")
+        let health4 = Sensor(image: HealthImages.alert!, title: "Alertness")
+        let health5 = Sensor(image: HealthImages.temp!, title: "Cabin Temp")
+        let health6 = Sensor(image: HealthImages.carbon!, title: "Carbon Monoxide")
 
         return [health1, health2, health3, health4, health5, health6]
     }

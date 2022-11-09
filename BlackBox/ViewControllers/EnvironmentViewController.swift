@@ -9,7 +9,7 @@ import UIKit
 
 class EnvironmentViewController: UIViewController {
 
-    var health: [Health] = []
+    var health: [Sensor] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +49,7 @@ class EnvironmentViewController: UIViewController {
         setTableViewDelegates(tableView: tableView)
         tableView.backgroundColor = .clear
         //customizes the TableViewCell
-        tableView.register(HomeHealthTableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(SensorTableViewCell.self, forCellReuseIdentifier: "cell")
 
         
         view.addSubview(tableView)
@@ -75,7 +75,7 @@ extension EnvironmentViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! HomeHealthTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! SensorTableViewCell
         let health = health[indexPath.section]
         
         cell.set(health: health)
@@ -102,14 +102,19 @@ extension EnvironmentViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0
     }
+    
+    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+        let navController = UINavigationController(rootViewController: SensorViewController())
+        self.present(navController, animated: true, completion: nil)
+    }
 }
 
 extension EnvironmentViewController {
     
-    func fetchData() -> [Health] {
-        let environment1 = Health(image: EnvironmentImages.temp!, title: "Cabin Temperature")
-        let environment2 = Health(image: EnvironmentImages.pressure!, title: "Cabin Pressure")
-        let environment3 = Health(image: EnvironmentImages.carbon!, title: "Cabin CO")
+    func fetchData() -> [Sensor] {
+        let environment1 = Sensor(image: EnvironmentImages.temp!, title: "Cabin Temperature")
+        let environment2 = Sensor(image: EnvironmentImages.pressure!, title: "Cabin Pressure")
+        let environment3 = Sensor(image: EnvironmentImages.carbon!, title: "Cabin CO")
       
         return [environment1, environment2, environment3]
     }
