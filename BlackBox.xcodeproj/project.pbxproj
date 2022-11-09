@@ -20,6 +20,9 @@
 		57D5544F291ADC060042A244 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D5544E291ADC060042A244 /* SummaryView.swift */; };
 		57D55452291B09730042A244 /* SummaryMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D55451291B09730042A244 /* SummaryMapView.swift */; };
 		57D55456291B16B20042A244 /* Inter-VariableFont_slnt,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57D55455291B16B20042A244 /* Inter-VariableFont_slnt,wght.ttf */; };
+		57EF0951291B1FB2006C9D74 /* HomeHealthTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EF0950291B1FB2006C9D74 /* HomeHealthTableViewCell.swift */; };
+		57EF0954291B2046006C9D74 /* Health.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EF0953291B2046006C9D74 /* Health.swift */; };
+		57EF0956291B222C006C9D74 /* HealthImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EF0955291B222C006C9D74 /* HealthImages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		57D5544E291ADC060042A244 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		57D55451291B09730042A244 /* SummaryMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryMapView.swift; sourceTree = "<group>"; };
 		57D55455291B16B20042A244 /* Inter-VariableFont_slnt,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-VariableFont_slnt,wght.ttf"; sourceTree = "<group>"; };
+		57EF0950291B1FB2006C9D74 /* HomeHealthTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHealthTableViewCell.swift; sourceTree = "<group>"; };
+		57EF0953291B2046006C9D74 /* Health.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Health.swift; sourceTree = "<group>"; };
+		57EF0955291B222C006C9D74 /* HealthImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthImages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,7 @@
 		57D5542C291AD5B90042A244 /* BlackBox */ = {
 			isa = PBXGroup;
 			children = (
+				57EF0952291B2037006C9D74 /* Models */,
 				57D55453291B163B0042A244 /* Fonts */,
 				57D55450291B08F70042A244 /* UIViews */,
 				57D5544D291ADBF00042A244 /* SwiftUIViews */,
@@ -108,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				57D55451291B09730042A244 /* SummaryMapView.swift */,
+				57EF0950291B1FB2006C9D74 /* HomeHealthTableViewCell.swift */,
 			);
 			path = UIViews;
 			sourceTree = "<group>";
@@ -118,6 +126,15 @@
 				57D55455291B16B20042A244 /* Inter-VariableFont_slnt,wght.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		57EF0952291B2037006C9D74 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				57EF0953291B2046006C9D74 /* Health.swift */,
+				57EF0955291B222C006C9D74 /* HealthImages.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,11 +209,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				57D55446291AD7D90042A244 /* HomeViewController.swift in Sources */,
+				57EF0954291B2046006C9D74 /* Health.swift in Sources */,
+				57EF0956291B222C006C9D74 /* HealthImages.swift in Sources */,
 				57D55448291ADAB80042A244 /* TeamViewController.swift in Sources */,
 				57D55432291AD5BA0042A244 /* MainTabBarViewController.swift in Sources */,
 				57D5544A291ADAC60042A244 /* VitalsViewController.swift in Sources */,
 				57D55452291B09730042A244 /* SummaryMapView.swift in Sources */,
 				57D5542E291AD5B90042A244 /* AppDelegate.swift in Sources */,
+				57EF0951291B1FB2006C9D74 /* HomeHealthTableViewCell.swift in Sources */,
 				57D55430291AD5BA0042A244 /* SceneDelegate.swift in Sources */,
 				57D5544C291ADAD50042A244 /* EnvironmentViewController.swift in Sources */,
 				57D55438291AD5BA0042A244 /* BlackBox.xcdatamodeld in Sources */,

@@ -31,7 +31,10 @@ class MainTabBarViewController: UITabBarController {
         vc4.title = "Crew"
         
         
-        tabBar.tintColor = .systemBlue
+        tabBar.tintColor = UIColor(red: 0/255, green: 85/255, blue: 187/255, alpha: 1)
+        tabBar.backgroundColor = .white
+        tabBar.barTintColor = UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 1)
+
         
         setViewControllers([vc1, vc2, vc3, vc4], animated: true)    }
 
