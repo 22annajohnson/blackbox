@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 import MapKit
 
 class VitalsViewController: UIViewController {
@@ -105,8 +106,12 @@ extension VitalsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
-        let navController = UINavigationController(rootViewController: SensorViewController())
-        self.present(navController, animated: true, completion: nil)
+        
+        //        Connecting UIKit table cells to SwiftUI controller (HeartRateView)
+        //        To Do: Change SwiftUI controller based on table cell section index
+                
+                let swiftUIController = UIHostingController(rootView: HeartRateView())
+                navigationController?.pushViewController(swiftUIController, animated: true)
     }
 }
 
@@ -117,9 +122,9 @@ extension VitalsViewController {
         let health2 = Sensor(image: HealthImages.heart!, title: "Heart Rate")
         let health3 = Sensor(image: HealthImages.stethoscope!, title: "Blood Oxygen")
         let health4 = Sensor(image: HealthImages.alert!, title: "Alertness")
-        let health5 = Sensor(image: HealthImages.temp!, title: "Cabin Temp")
-        let health6 = Sensor(image: HealthImages.carbon!, title: "Carbon Monoxide")
+//        let health5 = Sensor(image: HealthImages.temp!, title: "Cabin Temp")
+//        let health6 = Sensor(image: HealthImages.carbon!, title: "Carbon Monoxide")
 
-        return [health1, health2, health3, health4, health5, health6]
+        return [health1, health2, health3, health4]
     }
 }

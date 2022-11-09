@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class EnvironmentViewController: UIViewController {
 
@@ -104,8 +105,11 @@ extension EnvironmentViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
-        let navController = UINavigationController(rootViewController: SensorViewController())
-        self.present(navController, animated: true, completion: nil)
+        //        Connecting UIKit table cells to SwiftUI controller (HeartRateView)
+        //        To Do: Change SwiftUI controller based on table cell section index
+                
+                let swiftUIController = UIHostingController(rootView: HeartRateView())
+                navigationController?.pushViewController(swiftUIController, animated: true)
     }
 }
 

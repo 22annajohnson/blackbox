@@ -132,6 +132,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+        
+
         let navController = UINavigationController(rootViewController: SensorViewController())
         self.present(navController, animated: true, completion: nil)
     }
