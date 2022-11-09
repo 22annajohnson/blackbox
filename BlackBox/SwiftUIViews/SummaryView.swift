@@ -73,3 +73,10 @@ struct SummaryView_Previews: PreviewProvider {
 //        let swiftUIViewController = UIHostingController(rootView: SummaryView(navigationController: self.navigationController))
 //        self.navigationController?.pushViewController(swiftUIViewController, animated: true)
 //    }
+
+
+// The following code is to receive the font names
+//for family in UIFont.familyNames.sorted() {
+//    let names = UIFont.fontNames(forFamilyName: family)
+//    print("Family: \(family) Font names: \(names)")
+//}

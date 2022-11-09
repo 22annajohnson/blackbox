@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Images {
+struct HealthImages {
 
     static let heart = UIImage(systemName: "heart.fill")
     static let lungs = UIImage(systemName: "lungs.fill")

@@ -24,14 +24,10 @@ class HomeViewController: UIViewController, MKMapViewDelegate {
         addHealthAlerts()
         addFlightMap()
         
-        for family in UIFont.familyNames.sorted() {
-            let names = UIFont.fontNames(forFamilyName: family)
-            print("Family: \(family) Font names: \(names)")
-        }
-
+        
     }
     
-    //Adds the title to the page
+    //Adds the title to the vire controller
     func addTitle() {
         let title = UILabel()
         title.font = UIFont(name: "Inter-Regular_Bold", size: 32)
@@ -41,26 +37,29 @@ class HomeViewController: UIViewController, MKMapViewDelegate {
         view.addSubview(title)
     }
     
+    //Adds the Profile Image to the view controller
     func addProfileImage() {
         let image = UIImage(systemName: "person.circle.fill")
         let imageView = UIImageView(image: image)
-        imageView.tintColor = .systemFill
+        imageView.tintColor = UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 1)
         imageView.frame = CGRect(x: view.bounds.maxX-80, y: 60, width: 50, height: 50)
         
         view.addSubview(imageView)
         
     }
     
+    //Adds the vitals/environmental table to the view controller
     func addHealthAlerts() {
         let title = UILabel()
-        title.text = "Health"
+        title.text = "Status"
         title.frame = CGRect(x: 30, y: view.bounds.height*0.15, width: view.bounds.width-60, height: 30)
         title.font = UIFont(name: "Inter-Regular_Bold", size: 20)
         title.textColor = .black
         
-        let tableView = UITableView(frame: CGRect(x: 30, y: view.bounds.height*0.20, width: view.bounds.width-60, height: 300))
+        let tableView = UITableView(frame: CGRect(x: 30, y: view.bounds.height*0.15+30, width: view.bounds.width-60, height: 300))
         setTableViewDelegates(tableView: tableView)
         tableView.backgroundColor = .clear
+        //customizes the TableViewCell
         tableView.register(HomeHealthTableViewCell.self, forCellReuseIdentifier: "cell")
 
         
@@ -68,11 +67,13 @@ class HomeViewController: UIViewController, MKMapViewDelegate {
         view.addSubview(title)
     }
     
+    //Sets the delegats for the table view
     func setTableViewDelegates(tableView: UITableView) {
         tableView.delegate = self
         tableView.dataSource = self
     }
     
+    //Adds the map to the view controller
     func addFlightMap() {
         let title = UILabel()
         title.text = "My Flights"
@@ -88,8 +89,6 @@ class HomeViewController: UIViewController, MKMapViewDelegate {
         view.addSubview(map)
     }
   
-
-
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -105,16 +104,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! HomeHealthTableViewCell
         let health = health[indexPath.section]
         
+        //Sets the cells data
         cell.set(health: health)
         cell.backgroundColor = .white
-        
+        cell.layer.cornerRadius = 10
+
         let backgroundView = UIView()
         backgroundView.backgroundColor = UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 1)
         backgroundView.layer.cornerRadius = 10
         cell.selectedBackgroundView = backgroundView
         
-//        cell.tintColor = .black
-        cell.layer.cornerRadius = 10
         
         
         return cell
@@ -134,8 +133,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 extension HomeViewController {
     
     func fetchData() -> [Health] {
-        let health1 = Health(image: Images.lungs!, title: "Breathing Rate")
-        let health2 = Health(image: Images.heart!, title: "Heart Rate")
+        let health1 = Health(image: HealthImages.lungs!, title: "Breathing Rate")
+        let health2 = Health(image: HealthImages.heart!, title: "Heart Rate")
 //        let health3 = Health(image: Images.stethoscope!, title: "Blood Oxygen")
 //        let health4 = Health(image: Images.alert!, title: "Alertness")
 //        let health5 = Health(image: Images.temp!, title: "Cabin Temp")

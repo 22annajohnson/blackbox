@@ -23,6 +23,7 @@
 		57EF0951291B1FB2006C9D74 /* HomeHealthTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EF0950291B1FB2006C9D74 /* HomeHealthTableViewCell.swift */; };
 		57EF0954291B2046006C9D74 /* Health.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EF0953291B2046006C9D74 /* Health.swift */; };
 		57EF0956291B222C006C9D74 /* HealthImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EF0955291B222C006C9D74 /* HealthImages.swift */; };
+		57EF0958291B32F8006C9D74 /* EnvironmentImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EF0957291B32F8006C9D74 /* EnvironmentImages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		57EF0950291B1FB2006C9D74 /* HomeHealthTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHealthTableViewCell.swift; sourceTree = "<group>"; };
 		57EF0953291B2046006C9D74 /* Health.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Health.swift; sourceTree = "<group>"; };
 		57EF0955291B222C006C9D74 /* HealthImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthImages.swift; sourceTree = "<group>"; };
+		57EF0957291B32F8006C9D74 /* EnvironmentImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentImages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +98,9 @@
 			isa = PBXGroup;
 			children = (
 				57D55445291AD7D90042A244 /* HomeViewController.swift */,
-				57D55447291ADAB80042A244 /* TeamViewController.swift */,
 				57D55449291ADAC60042A244 /* VitalsViewController.swift */,
 				57D5544B291ADAD50042A244 /* EnvironmentViewController.swift */,
+				57D55447291ADAB80042A244 /* TeamViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -133,6 +135,7 @@
 			children = (
 				57EF0953291B2046006C9D74 /* Health.swift */,
 				57EF0955291B222C006C9D74 /* HealthImages.swift */,
+				57EF0957291B32F8006C9D74 /* EnvironmentImages.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				57D5544C291ADAD50042A244 /* EnvironmentViewController.swift in Sources */,
 				57D55438291AD5BA0042A244 /* BlackBox.xcdatamodeld in Sources */,
 				57D5544F291ADC060042A244 /* SummaryView.swift in Sources */,
+				57EF0958291B32F8006C9D74 /* EnvironmentImages.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

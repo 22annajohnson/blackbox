@@ -24,6 +24,7 @@ class HomeHealthTableViewCell: UITableViewCell {
         configureTitleLabel()
         setImageConstraints()
         setTitleLabelConstraints()
+     
         
     }
     
@@ -33,6 +34,7 @@ class HomeHealthTableViewCell: UITableViewCell {
     
     func set(health: Health) {
         healthImageView.image = health.image
+        healthImageView.contentMode = .scaleAspectFit
         healthTitleLabel.text = health.title
         
     }
@@ -64,5 +66,7 @@ class HomeHealthTableViewCell: UITableViewCell {
         healthTitleLabel.heightAnchor.constraint(equalToConstant: 80).isActive = true
         healthTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12).isActive = true
     }
+    
+
 
 }
