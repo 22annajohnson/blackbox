@@ -111,7 +111,7 @@ extension VitalsViewController: UITableViewDelegate, UITableViewDataSource {
         //        To Do: Change SwiftUI controller based on table cell section index
         let health = health[indexPath.section]
 
-        let swiftUIController = UIHostingController(rootView: HeartRateView(title: health.title))
+        let swiftUIController = UIHostingController(rootView: SensorView(title: health.title, indicator: health.indicator))
         navigationController?.pushViewController(swiftUIController, animated: true)
         
     }
@@ -120,12 +120,15 @@ extension VitalsViewController: UITableViewDelegate, UITableViewDataSource {
 extension VitalsViewController {
     
     func fetchData() -> [Sensor] {
-        let health1 = Sensor(image: HealthImages.lungs!, title: "Breathing Rate")
-        let health2 = Sensor(image: HealthImages.heart!, title: "Heart Rate")
-        let health3 = Sensor(image: HealthImages.stethoscope!, title: "Blood Oxygen")
-        let health4 = Sensor(image: HealthImages.alert!, title: "Alertness")
+        let health1 = Sensor(image: HealthImages.lungs!, title: "Breathing Rate", indicator: "Healthy")
+        let health2 = Sensor(image: HealthImages.heart!, title: "Heart Rate", indicator: "Unhealthy")
+        let health3 = Sensor(image: HealthImages.stethoscope!, title: "Blood Oxygen", indicator: "Warning")
+        let health4 = Sensor(image: HealthImages.alert!, title: "Alertness", indicator: "Healthy")
 //        let health5 = Sensor(image: HealthImages.temp!, title: "Cabin Temp")
 //        let health6 = Sensor(image: HealthImages.carbon!, title: "Carbon Monoxide")
+        
+        
+        
 
         return [health1, health2, health3, health4]
     }

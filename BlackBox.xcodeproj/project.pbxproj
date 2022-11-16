@@ -26,7 +26,7 @@
 		57EF0958291B32F8006C9D74 /* EnvironmentImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EF0957291B32F8006C9D74 /* EnvironmentImages.swift */; };
 		57EF095A291C16C6006C9D74 /* SensorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EF0959291C16C6006C9D74 /* SensorInfo.swift */; };
 		57EF095C291C1AAD006C9D74 /* SensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EF095B291C1AAD006C9D74 /* SensorViewController.swift */; };
-		A1B81C6A291C2D0C00469D98 /* HeartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B81C69291C2D0C00469D98 /* HeartRateView.swift */; };
+		A1B81C6A291C2D0C00469D98 /* SensorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B81C69291C2D0C00469D98 /* SensorView.swift */; };
 		A1B81C6C291C69A600469D98 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B81C6B291C69A600469D98 /* Data.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,7 +52,7 @@
 		57EF0957291B32F8006C9D74 /* EnvironmentImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentImages.swift; sourceTree = "<group>"; };
 		57EF0959291C16C6006C9D74 /* SensorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorInfo.swift; sourceTree = "<group>"; };
 		57EF095B291C1AAD006C9D74 /* SensorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewController.swift; sourceTree = "<group>"; };
-		A1B81C69291C2D0C00469D98 /* HeartRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateView.swift; sourceTree = "<group>"; };
+		A1B81C69291C2D0C00469D98 /* SensorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorView.swift; sourceTree = "<group>"; };
 		A1B81C6B291C69A600469D98 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				57D5544E291ADC060042A244 /* SummaryView.swift */,
-				A1B81C69291C2D0C00469D98 /* HeartRateView.swift */,
+				A1B81C69291C2D0C00469D98 /* SensorView.swift */,
 			);
 			path = SwiftUIViews;
 			sourceTree = "<group>";
@@ -247,7 +247,7 @@
 				57D55438291AD5BA0042A244 /* BlackBox.xcdatamodeld in Sources */,
 				57D5544F291ADC060042A244 /* SummaryView.swift in Sources */,
 				57EF095C291C1AAD006C9D74 /* SensorViewController.swift in Sources */,
-				A1B81C6A291C2D0C00469D98 /* HeartRateView.swift in Sources */,
+				A1B81C6A291C2D0C00469D98 /* SensorView.swift in Sources */,
 				57EF0958291B32F8006C9D74 /* EnvironmentImages.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

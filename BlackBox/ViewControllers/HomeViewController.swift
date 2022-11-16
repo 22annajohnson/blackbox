@@ -143,8 +143,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 extension HomeViewController {
     
     func fetchData() -> ([Sensor], [SensorInfo]) {
-        let health1 = Sensor(image: HealthImages.lungs!, title: "Breathing Rate")
-        let health2 = Sensor(image: HealthImages.heart!, title: "Heart Rate")
+        let health1 = Sensor(image: HealthImages.lungs!, title: "Breathing Rate", indicator: "Healthy")
+        let health2 = Sensor(image: HealthImages.heart!, title: "Heart Rate", indicator: "Unhealthy")
         
         let info1 = SensorInfo(title: "Breathing Rate")
         let info2 = SensorInfo(title: "Heart Rate")

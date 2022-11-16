@@ -8,26 +8,59 @@
 import SwiftUI
 import Charts
 
-struct HeartRateView: View {
+struct SensorView: View {
     
     weak var navigationController: UINavigationController?
     var title: String
+    var indicator: String
+    @State private var animationAmount = 1.0
     
     
     var body: some View {
         
-        VStack() {
+//        Adds titles and indicator images
+        HStack() {
             Text(title)
                 .font(.title)
                 .bold()
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding()
+            if indicator == "Healthy" {
+                Image(systemName: "checkmark.circle").foregroundColor(.green)
+                    .font(.system(size: 50.0, weight: .bold))
+                    .padding(25)
+            }
+            if indicator == "Warning" {
+                Image(systemName: "exclamationmark.triangle.fill").foregroundColor(.yellow)
+                    .font(.system(size: 50.0, weight: .bold))
+                    .padding(25)
+            }
+            if indicator == "Unhealthy" {
+                Image(systemName: "exclamationmark.octagon.fill").foregroundColor(.red)
+                    .font(.system(size: 50.0, weight: .bold))
+                    .padding(25)
+                    .overlay(
+                        Circle()
+                            .stroke(.red)
+                            .scaleEffect(animationAmount)
+                            .opacity(2 - animationAmount)
+                            .animation(
+                                .easeOut(duration: 1)
+                                    .repeatForever(autoreverses: false),
+                                value: animationAmount
+                            )
+                    )
+                    .onAppear {
+                        animationAmount = 2
+                    }
+                
+            }
         }
         
-        Divider()
-        
-        
         ScrollView{
+            
+            
+            Divider()
             
             VStack{
                 HStack {
@@ -36,6 +69,7 @@ struct HeartRateView: View {
                         .font(.subheadline)
                         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                         .padding()
+      
                 }
                 Chart(SalesData.last30Days, id: \.day) {
                     LineMark(
@@ -89,6 +123,6 @@ struct HeartRateView: View {
 
 struct HeartRateView_Previews: PreviewProvider {
     static var previews: some View {
-        HeartRateView(title: "Test")
+        SensorView(title: "test", indicator: "test")
     }
 }

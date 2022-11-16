@@ -109,7 +109,7 @@ extension EnvironmentViewController: UITableViewDelegate, UITableViewDataSource 
         //        To Do: Change SwiftUI controller based on table cell section index
         let health = health[indexPath.section]
 
-        let swiftUIController = UIHostingController(rootView: HeartRateView(title: health.title))
+        let swiftUIController = UIHostingController(rootView: SensorView(title: health.title, indicator: health.indicator))
         navigationController?.pushViewController(swiftUIController, animated: true)
     }
 }
@@ -117,9 +117,9 @@ extension EnvironmentViewController: UITableViewDelegate, UITableViewDataSource 
 extension EnvironmentViewController {
     
     func fetchData() -> [Sensor] {
-        let environment1 = Sensor(image: EnvironmentImages.temp!, title: "Cabin Temperature")
-        let environment2 = Sensor(image: EnvironmentImages.pressure!, title: "Cabin Pressure")
-        let environment3 = Sensor(image: EnvironmentImages.carbon!, title: "Cabin CO")
+        let environment1 = Sensor(image: EnvironmentImages.temp!, title: "Cabin Temperature", indicator: "healthy")
+        let environment2 = Sensor(image: EnvironmentImages.pressure!, title: "Cabin Pressure", indicator: "healthy")
+        let environment3 = Sensor(image: EnvironmentImages.carbon!, title: "Cabin CO", indicator: "healthy")
       
         return [environment1, environment2, environment3]
     }
