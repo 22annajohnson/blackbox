@@ -27,7 +27,7 @@ class EnvironmentViewController: UIViewController {
         let title = UILabel()
         title.font = UIFont(name: "Inter-Regular_Bold", size: 32)
         title.textColor = .black
-        title.text = "Cabin Conditions"
+        title.text = "Cabin"
         title.frame = CGRect(x: 30, y: 60, width: view.bounds.width-60, height: 50)
         view.addSubview(title)
     }
@@ -117,9 +117,9 @@ extension EnvironmentViewController: UITableViewDelegate, UITableViewDataSource 
 extension EnvironmentViewController {
     
     func fetchData() -> [Sensor] {
-        let environment1 = Sensor(image: EnvironmentImages.temp!, title: "Cabin Temperature", indicator: "healthy")
-        let environment2 = Sensor(image: EnvironmentImages.pressure!, title: "Cabin Pressure", indicator: "healthy")
-        let environment3 = Sensor(image: EnvironmentImages.carbon!, title: "Cabin CO", indicator: "healthy")
+        let environment1 = Sensor(image: EnvironmentImages.temp!, title: "Cabin Temperature", indicator: "Unhealthy")
+        let environment2 = Sensor(image: EnvironmentImages.pressure!, title: "Cabin Pressure", indicator: "Healthy")
+        let environment3 = Sensor(image: EnvironmentImages.carbon!, title: "Cabin CO", indicator: "Healthy")
       
         return [environment1, environment2, environment3]
     }

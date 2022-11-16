@@ -27,17 +27,17 @@ struct SensorView: View {
                 .padding()
             if indicator == "Healthy" {
                 Image(systemName: "checkmark.circle").foregroundColor(.green)
-                    .font(.system(size: 50.0, weight: .bold))
+                    .font(.system(size: 40.0, weight: .bold))
                     .padding(25)
             }
             if indicator == "Warning" {
                 Image(systemName: "exclamationmark.triangle.fill").foregroundColor(.yellow)
-                    .font(.system(size: 50.0, weight: .bold))
+                    .font(.system(size: 40.0, weight: .bold))
                     .padding(25)
             }
             if indicator == "Unhealthy" {
                 Image(systemName: "exclamationmark.octagon.fill").foregroundColor(.red)
-                    .font(.system(size: 50.0, weight: .bold))
+                    .font(.system(size: 40.0, weight: .bold))
                     .padding(25)
                     .overlay(
                         Circle()
@@ -71,12 +71,21 @@ struct SensorView: View {
                         .padding()
       
                 }
-                Chart(SalesData.last30Days, id: \.day) {
-                    LineMark(
-                        x: .value("Day", $0.day, unit: .day),
-                        y: .value("Sales", $0.sales)
-                    )
-                }.frame(height: 100)
+                HStack(alignment: .center, spacing: 0){
+                    Text("Y-Values")
+                        .rotationEffect(Angle(degrees: -90))
+                        .font(.system(size: 10))
+                    Chart(SalesData.last30Days, id: \.day) {
+                        LineMark(
+                            x: .value("Day", $0.day, unit: .day),
+                            y: .value("Sales", $0.sales)
+                        )
+                    }.frame(height: 200)
+
+                }
+                
+                Text("Time")
+                    .font(.system(size: 10))
             }
             
             Divider()
