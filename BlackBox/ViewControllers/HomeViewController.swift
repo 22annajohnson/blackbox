@@ -29,6 +29,7 @@ class HomeViewController: UIViewController, MKMapViewDelegate {
         
     }
     
+    
     //Adds the title to the vire controller
     func addTitle() {
         let title = UILabel()

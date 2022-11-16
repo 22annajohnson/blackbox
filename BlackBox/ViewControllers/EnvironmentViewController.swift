@@ -107,9 +107,10 @@ extension EnvironmentViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
         //        Connecting UIKit table cells to SwiftUI controller (HeartRateView)
         //        To Do: Change SwiftUI controller based on table cell section index
-                
-                let swiftUIController = UIHostingController(rootView: HeartRateView())
-                navigationController?.pushViewController(swiftUIController, animated: true)
+        let health = health[indexPath.section]
+
+        let swiftUIController = UIHostingController(rootView: HeartRateView(title: health.title))
+        navigationController?.pushViewController(swiftUIController, animated: true)
     }
 }
 

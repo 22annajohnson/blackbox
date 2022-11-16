@@ -11,12 +11,13 @@ import Charts
 struct HeartRateView: View {
     
     weak var navigationController: UINavigationController?
+    var title: String
     
     
     var body: some View {
         
         VStack() {
-            Text("Heart Rate")
+            Text(title)
                 .font(.title)
                 .bold()
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -41,7 +42,7 @@ struct HeartRateView: View {
                         x: .value("Day", $0.day, unit: .day),
                         y: .value("Sales", $0.sales)
                     )
-                }
+                }.frame(height: 100)
             }
             
             Divider()
@@ -88,6 +89,6 @@ struct HeartRateView: View {
 
 struct HeartRateView_Previews: PreviewProvider {
     static var previews: some View {
-        HeartRateView()
+        HeartRateView(title: "Test")
     }
 }
