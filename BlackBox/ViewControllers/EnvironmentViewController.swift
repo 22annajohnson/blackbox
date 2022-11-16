@@ -27,7 +27,7 @@ class EnvironmentViewController: UIViewController {
         let title = UILabel()
         title.font = UIFont(name: "Inter-Regular_Bold", size: 32)
         title.textColor = .black
-        title.text = "Cabin"
+        title.text = "Environment"
         title.frame = CGRect(x: 30, y: 60, width: view.bounds.width-60, height: 50)
         view.addSubview(title)
     }

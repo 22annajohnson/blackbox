@@ -18,6 +18,7 @@ struct HealthImages {
     static let temp = UIImage(systemName: "thermometer.sun")
     static let carbon = UIImage(systemName: "smoke.fill")
     static let alert = UIImage(systemName: "zzz")
+    static let bodyTemp = UIImage(systemName: "medical.thermometer.fill")
 
 
 }

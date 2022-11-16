@@ -120,16 +120,17 @@ extension VitalsViewController: UITableViewDelegate, UITableViewDataSource {
 extension VitalsViewController {
     
     func fetchData() -> [Sensor] {
-        let health1 = Sensor(image: HealthImages.lungs!, title: "Breathing Rate", indicator: "Healthy")
+        let health1 = Sensor(image: HealthImages.bodyTemp!, title: "Body Temperature", indicator: "Unhealthy")
         let health2 = Sensor(image: HealthImages.heart!, title: "Heart Rate", indicator: "Unhealthy")
         let health3 = Sensor(image: HealthImages.stethoscope!, title: "Blood Oxygen", indicator: "Warning")
         let health4 = Sensor(image: HealthImages.alert!, title: "Alertness", indicator: "Healthy")
-//        let health5 = Sensor(image: HealthImages.temp!, title: "Cabin Temp")
+        let health5 = Sensor(image: HealthImages.lungs!, title: "Breathing Rate", indicator: "Healthy")
+        
 //        let health6 = Sensor(image: HealthImages.carbon!, title: "Carbon Monoxide")
         
         
         
 
-        return [health1, health2, health3, health4]
+        return [health1, health2, health3, health4, health5]
     }
 }
