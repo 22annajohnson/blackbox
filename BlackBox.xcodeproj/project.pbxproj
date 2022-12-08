@@ -28,6 +28,8 @@
 		57EF095C291C1AAD006C9D74 /* SensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EF095B291C1AAD006C9D74 /* SensorViewController.swift */; };
 		A1B81C6A291C2D0C00469D98 /* SensorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B81C69291C2D0C00469D98 /* SensorView.swift */; };
 		A1B81C6C291C69A600469D98 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B81C6B291C69A600469D98 /* Data.swift */; };
+		A1BC8AF0294146BC00014D53 /* BluetoothViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BC8AEF294146BC00014D53 /* BluetoothViewModel.swift */; };
+		A1BC8AF329414CC100014D53 /* CBUUIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BC8AF229414CC100014D53 /* CBUUIDs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		57EF095B291C1AAD006C9D74 /* SensorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewController.swift; sourceTree = "<group>"; };
 		A1B81C69291C2D0C00469D98 /* SensorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorView.swift; sourceTree = "<group>"; };
 		A1B81C6B291C69A600469D98 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		A1BC8AEF294146BC00014D53 /* BluetoothViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothViewModel.swift; sourceTree = "<group>"; };
+		A1BC8AF229414CC100014D53 /* CBUUIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBUUIDs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 				57D5543B291AD5BB0042A244 /* LaunchScreen.storyboard */,
 				57D5543E291AD5BB0042A244 /* Info.plist */,
 				57D55436291AD5BA0042A244 /* BlackBox.xcdatamodeld */,
+				A1BC8AF129414C8A00014D53 /* BluetoothResources */,
 			);
 			path = BlackBox;
 			sourceTree = "<group>";
@@ -158,6 +163,15 @@
 				57EF095B291C1AAD006C9D74 /* SensorViewController.swift */,
 			);
 			path = DataViewControllers;
+			sourceTree = "<group>";
+		};
+		A1BC8AF129414C8A00014D53 /* BluetoothResources */ = {
+			isa = PBXGroup;
+			children = (
+				A1BC8AEF294146BC00014D53 /* BluetoothViewModel.swift */,
+				A1BC8AF229414CC100014D53 /* CBUUIDs.swift */,
+			);
+			path = BluetoothResources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +250,9 @@
 				57EF0956291B222C006C9D74 /* HealthImages.swift in Sources */,
 				57D55448291ADAB80042A244 /* TeamViewController.swift in Sources */,
 				57D55432291AD5BA0042A244 /* MainTabBarViewController.swift in Sources */,
+				A1BC8AF0294146BC00014D53 /* BluetoothViewModel.swift in Sources */,
 				57D5544A291ADAC60042A244 /* VitalsViewController.swift in Sources */,
+				A1BC8AF329414CC100014D53 /* CBUUIDs.swift in Sources */,
 				57EF095A291C16C6006C9D74 /* SensorInfo.swift in Sources */,
 				A1B81C6C291C69A600469D98 /* Data.swift in Sources */,
 				57D55452291B09730042A244 /* SummaryMapView.swift in Sources */,
