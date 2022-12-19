@@ -8,11 +8,13 @@
 import UIKit
 import SwiftUI
 import MapKit
+import CoreBluetooth
 
 class HomeViewController: UIViewController, MKMapViewDelegate {
 
     var health: [Sensor] = []
     var info: [SensorInfo] = []
+    let bluetooth = BluetoothViewModel()
 
     
     override func viewDidLoad() {
@@ -25,8 +27,6 @@ class HomeViewController: UIViewController, MKMapViewDelegate {
         addProfileImage()
         addHealthAlerts()
         addFlightMap()
-        
-        
     }
     
     
@@ -48,8 +48,21 @@ class HomeViewController: UIViewController, MKMapViewDelegate {
         imageView.frame = CGRect(x: view.bounds.maxX-80, y: 60, width: 50, height: 50)
         
         view.addSubview(imageView)
-        
     }
+    
+    func addBLEButton() {
+        let button = UIButton()
+        button.frame = CGRect(x: view.bounds.maxX-80, y: 60, width: 50, height: 50)
+        button.backgroundColor = .blue
+        view.addSubview(button)
+//        let bluetooth = initiateBLE()
+//        button.addTarget(self, action: #selector(initiateBLE()), for: .touchUpInside)
+    }
+//    
+//    @objc func initiateBLE() {
+//        @ObservedObject var bluetoothViewModel = BluetoothViewModel()
+//    }
+//
     
     //Adds the vitals/environmental table to the view controller
     func addHealthAlerts() {

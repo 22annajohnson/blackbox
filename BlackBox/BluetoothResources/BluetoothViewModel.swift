@@ -124,14 +124,13 @@ extension BluetoothViewModel: CBCentralManagerDelegate {
         characteristicASCIIValue = ASCIIstring
     
         let tempPoint = String(characteristicASCIIValue).split(separator: ",")[0]
-        let timePoint = String(characteristicASCIIValue).split(separator: ",")[1]
-        
-        print(timePoint)
+//        let timePoint = String(characteristicASCIIValue).split(separator: ",")[1]
+
         print(tempPoint)
         
 //        Add data to CoreData here
         
-        tempData.append(String(tempPoint), String(timePoint))
+        tempData.append(String(tempPoint))
         
     }
     
